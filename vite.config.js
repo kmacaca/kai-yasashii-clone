@@ -1,5 +1,6 @@
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
+import glsl from 'vite-plugin-glsl'
 import ViteRestart from 'vite-plugin-restart'
 
 export default defineConfig({
@@ -18,5 +19,6 @@ export default defineConfig({
     ViteRestart({
       restart: ['public/**'],
     }),
+    glsl(),
   ],
 })

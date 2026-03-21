@@ -2,12 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>kai-yasashii-clone</title>
+    <title>kai-yasasii-clone</title>
     <script type="module" src="./main.js"></script>
   </head>
-  <body>
-    <h1 class="text-red-400">hello world</h1>
+  <body class="h-screen w-screen overflow-hidden">
+    <div data-grid class="grid-container">
+      <template id="grid-item-template">
+        <div data-grid-item class="item">
+          <a href="#" class="block h-full w-full">
+            <div class="item-inner">
+              <div class="item-bg"></div>
+              <div data-grid-item-canvas class="item-canvas"></div>
+              <div data-grid-item-hash class="item-hash"></div>
+              <div class="grid grid-cols-[1fr_auto] items-center">
+                <div data-grid-item-name class="item-name"></div>
+                <div class="item-icon">→</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </template>
+    </div>
+    <canvas data-grid-webgl class="pointer-events-none fixed"></canvas>
   </body>
 </html>

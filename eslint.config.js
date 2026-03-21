@@ -5,12 +5,12 @@ import globals from 'globals'
 export default [
   js.configs.recommended,
   {
+    plugins: { import: importPlugin },
     languageOptions: {
       globals: {
         ...globals.browser,
       },
     },
-    plugins: { import: importPlugin },
     rules: {
       'arrow-body-style': ['warn', 'as-needed'],
       curly: ['error', 'all'],
@@ -34,4 +34,5 @@ export default [
       'import/first': 'error',
     },
   },
+  { ignores: ['src/vendor'] },
 ]
