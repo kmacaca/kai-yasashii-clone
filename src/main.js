@@ -190,7 +190,7 @@ const draggable = Draggable.create(dragProxy, {
   dragClickables: true,
   inertia: true,
   maxDuration: 0.5,
-  throwResistance: 5000,
+  throwResistance: 3000,
   onPressInit() {
     this.startProg = new THREE.Vector2(loopX.progress(), loopY.progress())
     this.progPerPixel = new THREE.Vector2(1 / loopX.totalWidth, 1 / loopY.totalHeight)
