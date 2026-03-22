@@ -67,12 +67,12 @@ planeGeometry.setAttribute('aIntensity', new THREE.BufferAttribute(intensitiesAr
 planeGeometry.setAttribute('aAngle', new THREE.BufferAttribute(anglesArray, 1))
 planeGeometry.setAttribute('aRotate', new THREE.BufferAttribute(rotatesArray, 1))
 
-let items, loopX, loopY, loopCtx
-let prevShapeId = -1
-
 /**
  * Functions
  */
+let items, loopX, loopY, loopCtx
+let prevShapeId = -1
+
 const addItem = () => {
   const item = getTemplateClone('#grid-item-template')
   const scene = new THREE.Scene()
