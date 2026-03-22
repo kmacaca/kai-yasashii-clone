@@ -17,7 +17,9 @@
               <div data-grid-item-hash class="item-hash"></div>
               <div class="grid grid-cols-[1fr_auto] items-center">
                 <div data-grid-item-name class="item-name"></div>
-                <div class="item-icon">→</div>
+                <div class="item-icon">
+                  <svg><use xlink:href="#arrow"></use></svg>
+                </div>
               </div>
             </div>
           </a>
@@ -25,6 +27,16 @@
       </template>
     </div>
     <canvas data-grid-webgl class="pointer-events-none fixed"></canvas>
+
+    <svg class="hidden">
+      <defs>
+        <symbol id="arrow" viewBox="0 0 24 20">
+          <path
+            d="M15.66,0.9c0,0,3.6,3.61,7.81,7.82C23.82,9.08,24,9.54,24,10c0,0.46-0.18,0.92-0.53,1.27c-4.21,4.21-7.81,7.82-7.81,7.82 c-0.35,0.35-0.81,0.52-1.26,0.52c-0.46,0-0.92-0.18-1.27-0.53c-0.7-0.7-0.71-1.84-0.01-2.54l4.75-4.74H1.8C0.81,11.8,0,10.99,0,10 c0-0.99,0.81-1.8,1.8-1.8h16.07l-4.75-4.75c-0.69-0.69-0.69-1.83,0.01-2.53c0.35-0.35,0.81-0.53,1.27-0.53 C14.86,0.39,15.32,0.56,15.66,0.9z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
 
     <div
       class="fixed bottom-8 left-1/2 z-999 -translate-x-1/2 rounded-lg bg-blue-100 px-8 py-2 text-center [&_a]:text-blue-600 [&_a]:underline [&_a:hover]:text-blue-800"
